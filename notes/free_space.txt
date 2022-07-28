@@ -39,6 +39,7 @@ C475  | C4BC |  71  | 3    | Torch/FW use in battle
 C4BC  | C4CE |  18  | 3    | Three's Company
 C4CE  | C4E8 |  26  | 3    | Cursed Princess
 C4E8  | C4F5 |  13  | 3    | Scared Metal Slimes
+C7EC  | C815 |  41  | 3    | Window data for new "Begin New Quest" window
 C816  | C863 |  77  | 3    | Window data for hero build options
 C864  | C8E5 | 129  | 3    | Stat bonus/penalty calculations
 C8E6  | C8FF |  25  | 3    | Checks for 0 exp for main menu build changes
