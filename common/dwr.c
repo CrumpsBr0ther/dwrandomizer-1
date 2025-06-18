@@ -626,6 +626,14 @@ static void randomize_growth(dw_rom *rom)
             stats->hp = MAX(rom->stats[i-1].hp, stats->hp);
         }
     }
+
+    if (NO_BUILDS(rom)) {
+        for (i=0; i < 30; i++) {
+            stats = &rom->stats[i];
+            stats->str = MAX(stats->str, 6);
+        }
+    }
+     
 }
 
 /**
@@ -676,8 +684,14 @@ static void randomize_spells(dw_rom *rom)
                 stats->spells |= 1 << (j + 8) % 16;
             }
         }
-        if (stats->spells) {
-            stats->mp = MAX(stats->mp, 6);
+	if (NO_BUILDS(rom)) {
+            if (stats->spells) {
+                stats->mp = MAX(stats->mp, 8);
+            }
+        } else {
+            if (stats->spells) {
+                stats->mp = MAX(stats->mp, 6);
+            }
         }
     }
 }
